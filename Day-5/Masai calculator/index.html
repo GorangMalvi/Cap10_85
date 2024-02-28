@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masai Calculator</title>
+    
+    <style>
+      #Parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .P2 > h1 {
+        font-size: 50px;
+        font-weight: 1000;
+        color: orange;
+        margin-bottom: 100px;
+      }
+      #Parent > .main {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .P1 {
+        display: grid;
+        justify-content: center;
+        width: 350px;
+        height: 450px;
+        grid-template-columns: repeat(4, 80px);
+        grid-template-rows: repeat(5, 80px);
+
+        gap: 5px;
+        margin: 20px;
+      }
+      .P1 > .child {
+        border-radius: 10px;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        flex-direction: column;
+      }
+      .P1 div:nth-child(1) {
+        grid-area: 1/1/1/5;
+      }
+      .P1 div:nth-child(5) {
+        background-color: gray;
+      }
+      .P1 div:nth-child(9) {
+        background-color: gray;
+      }
+      .P1 div:nth-child(13) {
+        background-color: gray;
+      }
+      .P1 div:nth-child(14) {
+        background-color: rgb(235, 10, 10);
+      }
+      .P1 div:nth-child(16) {
+        background-color: gray;
+      }
+      .P1 div:nth-child(17) {
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Parent">
+      <div class="P2">
+        <h1>Masai Calculator</h1>
+      </div>
+      <div class="main">
+        <div class="P1">
+          <div class="child c1">
+            <h1></h1>
+          </div>
+          <div class="child c2">
+            <h1>1</h1>
+          </div>
+          <div class="child c3">
+            <h1>2</h1>
+          </div>
+          <div class="child c4">
+            <h1>3</h1>
+          </div>
+          <div class="child c5">
+            <h1>+</h1>
+          </div>
+          <div class="child c6">
+            <h1>4</h1>
+          </div>
+          <div class="child c7">
+            <h1>5</h1>
+          </div>
+          <div class="child c8">
+            <h1>6</h1>
+          </div>
+          <div class="child c9">
+            <h1>-</h1>
+          </div>
+          <div class="child c10">
+            <h1>7</h1>
+          </div>
+          <div class="child c11">
+            <h1>8</h1>
+          </div>
+          <div class="child c12">
+            <h1>9</h1>
+          </div>
+          <div class="child c13">
+            <h1>*</h1>
+          </div>
+          <div class="child c14">
+            <h1>C</h1>
+          </div>
+          <div class="child c15">
+            <h1>0</h1>
+          </div>
+          <div class="child c16">
+            <h1>=</h1>
+          </div>
+          <div class="child c17">
+            <h1>/</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

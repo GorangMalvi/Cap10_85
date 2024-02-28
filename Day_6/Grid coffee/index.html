@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Coffee</title>
+    <style>
+        #Parent{
+           height:100%;
+            background-color:papayawhip;
+            padding: 50px;
+        }
+
+        *{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .child{
+            display: grid;
+            grid-template-columns: repeat(3,498px);
+            grid-template-rows: repeat(3,209px);
+            gap: 42px;
+            margin: 33px 230px 64px 230px;
+           
+        }
+
+        .card{
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe4yrLCeFKzilrAmAk5JIigzAByi9j6acYEA&usqp=CAU);
+            background-size: contain;
+            background-size: 100%;
+            border-radius: 10px;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .child >.card :nth-child(1){
+            color: antiquewhite;
+        }
+
+        .child >.card :nth-child(2){
+            margin-left: 50%;
+        }
+
+        .child >.card :nth-child(3){
+            grid-area: 2/1/2/3;
+            color: antiquewhite;
+            font-weight: 600;
+        }
+        /*Medium Screen*/
+        @media screen and (min-width : 768px) and (max-width : 1023px) {
+            .child{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+        @media screen  and (max-width : 767px) {
+            .child{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="Parent">
+        <div class="child">
+            <div class="card">
+                <div>
+                    <h3>Cappuccino</h3>
+                </div>
+                <div>
+                    <h3>$49</h3>
+                </div>
+                    
+                <p>A cappuccino is an espresso-based coffee drink that is traditionally prepared with steamed milk foam.</p>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Americano</h3>
+                    
+                </div>
+                <div>
+                    <h3>$49</h3>
+                </div>
+                <p>Caffè americano also known as Americano or American, is a type of coffee drink prepared by diluting an espresso shot with hot water at a 1:3 to 1:4 ratio.</p>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Espresso</h3>
+                    
+                </div>
+                <div>
+                    <h3>$49</h3>
+                </div>
+                <p>Espresso is one of the world's most popular coffee-brewing methods. Originating from Italy.</p>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Macchiato</h3>
+                    
+                </div>
+                <div>
+                    <h3>$49</h3>
+                </div>
+                <p>Caffè macchiato, sometimes called espresso macchiato, is an espresso coffee drink with a small amount of milk, usually foamed. In Italian, macchiato means "stained" or "spotted"</p>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Mocha</h3>
+                    
+                </div>
+                <div>
+                    <h3>$49</h3>
+                </div>
+                <p>A mocha is often interpreted differently across the world, the basis is that a shot of espresso is combined with a chocolate powder or syrup, followed by milk or cream. It is a variant of a latte, in the sense that it is often 1/3 espresso and 2/3 steamed milk.</p>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Coffee Latte</h3>
+                   
+                </div>
+                <div>
+                     <h3>$49</h3>
+                </div>
+                <p>Caffè latte, often shortened to just latte in English, is a coffee drink of Italian origin made with espresso and steamed milk.</p>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Piccolo Latte</h3>
+                    
+                </div>
+                <div>
+                    <h3>$49</h3>
+                </div>
+                <p>The piccolo latte, or piccolo, as it is commonly referred to on coffee menus, is a small milk beverage that’s typically served in a 3–4 oz/85–114 ml glass.</p>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Ristretto</h3>
+                   
+                </div>
+                <div>
+                     <h3>$49</h3>
+                </div>
+                <p>Ristretto is a "short shot" of a more highly concentrated espresso coffee. It is made with the same amount of ground coffee, but extracted with a finer grind using half as much water. </p>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Affogato</h3>
+                   
+                </div>
+                <div>
+                     <h3>$49</h3>
+                </div>
+                <p>An affogato, more traditionally known as "affogato al caffè", is an Italian coffee-based dessert. It usually takes the form of a scoop of plain milk-flavored or vanilla gelato or ice cream topped or "drowned" with a shot of hot espresso.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
