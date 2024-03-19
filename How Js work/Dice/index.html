@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dice Game</title>
+<style>
+  .dice {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    margin: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+  }
+  #winner {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+<div id="member-1" class="dice">0</div>
+<div id="member-2" class="dice">0</div>
+<div id="member-3" class="dice">0</div>
+<button id="roll">ROLL THE DICE</button>
+<div id="winner"></div>
+
+<script>
+var rollButton = document.getElementById("roll");
+rollButton.addEventListener("click", function() {
+    rollDice();
+});
+
+function rollDice() {
+  var dice1 = document.getElementById("member-1");
+  var dice2 = document.getElementById("member-2");
+  var dice3 = document.getElementById("member-3");
+  
+  var score1 = getRandomNumber();
+  var score2 = getRandomNumber();
+  var score3 = getRandomNumber();
+  
+  dice1.textContent = score1;
+  dice2.textContent = score2;
+  dice3.textContent = score3;
+
+  var winnerDiv = document.getElementById("winner");
+
+  // Find minimum and maximum scores manually
+  var minScore = Math.min(score1, score2, score3);
+  var maxScore = Math.max(score1, score2, score3);
+
+  if (score1 === score2 && score2 === score3) {
+    winnerDiv.textContent = "It's a draw!";
+    dice1.style.backgroundColor = "blue";
+    dice2.style.backgroundColor = "blue";
+    dice3.style.backgroundColor = "blue";
+  } else {
+    if (score1 === maxScore) {
+      dice1.style.backgroundColor = "green";
+    } else if (score1 === minScore) {
+      dice1.style.backgroundColor = "red";
+    } else {
+      dice1.style.backgroundColor = "yellow";
+    }
+
+    if (score2 === maxScore) {
+      dice2.style.backgroundColor = "green";
+    } else if (score2 === minScore) {
+      dice2.style.backgroundColor = "red";
+    } else {
+      dice2.style.backgroundColor = "yellow";
+    }
+
+    if (score3 === maxScore) {
+      dice3.style.backgroundColor = "green";
+    } else if (score3 === minScore) {
+      dice3.style.backgroundColor = "red";
+    } else {
+      dice3.style.backgroundColor = "yellow";
+    }
+
+    winnerDiv.textContent = "Winner: Member " + ((maxScore === score1) ? 1 : ((maxScore === score2) ? 2 : 3));
+  }
+}
+
+function getRandomNumber() {
+  return Math.floor(Math.random() * 6) + 1;
+}
+</script>
+</body>
+</html>
